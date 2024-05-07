@@ -384,7 +384,8 @@ padding: 50px;
 
 .footer{
   background-color: #F2F2F2;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .fpara{
@@ -395,7 +396,7 @@ padding: 50px;
 
 .flogo{
   margin-top: -25px;
-  margin-left: 300px;
+  margin-left: 200px;
 }
 
 
@@ -479,19 +480,20 @@ tr{
 .summit, .nextdate{
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sponsor-logos.home_sponser
+{
+  margin-left: 0px !important;
+  justify-content: center;
+}
+.sponsor-logos.home_sponser li
+{
+  left: 0px;
+}
+.banner_main_btn
+{
+  text-align: center;
+}
+.banner_main_btn a.btn
+{
+  margin-left: 0px !important;
+}

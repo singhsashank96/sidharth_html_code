@@ -149,9 +149,9 @@
 
 
 .multiply {
-	position: absolute;
+	/* position: absolute; */
 	color: #000;
-	margin-left: 46rem;
+	/* margin-left: 46rem; */
 	font-family: Inter;
 	font-size: 15px;
 	font-style: normal;
@@ -163,10 +163,6 @@
 }
 
 .gold1 h2 {
-	white-space: nowrap;
-}
-
-.diamond h2 {
 	white-space: nowrap;
 }
 
@@ -237,7 +233,7 @@
 	background-color: #FF005A;
 	height: 50px; 
 	width: 100%; 
-	margin-top: 150px;
+	margin-top: 100px;
   }
   
   .footer {
@@ -270,4 +266,21 @@
 
 .total{
 	margin-top: 20px;
+}
+.final-price.check_final
+{
+	float: right;
+}
+.checkout-btn.check_new
+{
+	text-align: right;
+	padding-top: 8rem;
+}
+.checkout-btn.check_new a
+{
+	margin-left: 0px;
+}
+.checkout-btn.check_new a.disabled
+{
+	position: initial;
 }
