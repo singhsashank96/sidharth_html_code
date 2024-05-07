@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ticket Type</title>
+   <link rel="stylesheet" href="style/checkout-page.css">
+</head>
+<body>
+   <nav class="navbar">
+      <img src="images/logo.svg" alt="Logo" class="logo">  
+      <ul class="nav-menu">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Speakers</a></li>
+         <li><a href="#">Schedule</a></li>
+         <li><a href="#">Sponsors</a></li>
+         <li><a href="#">Info</a></li>
+      </ul>
+      <div class="text-container">
+         <p class="para-1">The Inspire Summit</p>
+         <p>HITEX Exhibition Center &nbsp; • &nbsp; July 22 | 5PM</p>
+      </div>
+   </nav>
+
+<section  >
+   <div style="margin-top: 30px;">
+      <div class="checkOut_conitainer">
+
+         <div class="container-ticket silver">
+            <div class="ticket-header">
+               <div>  <h2>PHASE 1-SILVER</h2></div>
+               <div>    <span class="price">Rs. 999</span>
+                  <span class="multiplication">x</span>
+                  <select name="tickets" class="number-of-tickets">
+                     <option>0</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select></div>
+           
+            </div>
+            <p>This ticket grants entry to one person into the Silver section (standing only).</p>
+         </div>
+        
+         <div class="container-ticket gold">
+            <div class="ticket-header">
+               <div>  <h2>PHASE 1-GOLD</h2></div>
+               <div>    <span class="price">Rs.1499</span>
+                  <span class="multiplication">x</span>
+                  <select name="tickets" class="number-of-tickets">
+                     <option>0</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select></div>
+           
+            </div>
+            <p>This ticket grants entry to one person into the Silver section (standing only).</p>
+         </div>
+
+         <div class="container-ticket gold">
+            <div class="ticket-header">
+               <div>  <h2>PHASE 1-FANPIT</h2></div>
+               <div>    <span class="price">Rs. 2499</span>
+                  <span class="multiplication">x</span>
+                  <select name="tickets" class="number-of-tickets">
+                     <option>0</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select></div>
+           
+            </div>
+            <p>This ticket grants entry to one person into the Fanpit area (front stage).</p>
+         </div>
+
+         <div class="container-ticket gold">
+            <div class="ticket-header">
+               <div>   <h2>GOLD TABLE (4-6PAX) | STANDING COCKTAIL TABLE</h2></div>
+               <div>    <span class="price">Rs. 50000</span>
+                  <span class="multiplication">x</span>
+                  <select name="tickets" class="number-of-tickets">
+                     <option>0</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select></div>
+           
+            </div>
+            <p>2 bottles of premium liquor (whisky/vodka), <br> 12 beers, unlimited chasers,<br> veg/non veg starters, elevated stage, hassle-free entry,<br> 2 special car parking passes, dedicated restrooms,<br> security and service.</p>
+         </div>
+      
+        
+         
+        
+         <div class="container-ticket diamond">
+           
+            <div class="ticket-header">
+               <div>   <h2>DIAMOND TABLE (6-8 PAX) | SEATING SOFA</h2></div>
+               <div>    <span class="price">Rs. 85000</span>
+                  <span class="multiplication">x</span>
+                  <select name="tickets" class="number-of-tickets">
+                     <option>0</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                  </select></div>
+           
+            </div>
+            <p>3 bottles of premium liquor (whisky/vodka),<br> 18 beers, unlimited chasers,<br> veg/non veg starters,<br> elevated stage, hassle-free entry,<br> 3 special car parking passes, <br>dedicated restrooms,<br> security and service.</p>
+         </div>
+         <div class="total">
+            <span class="final-head">Total</span>   
+            <span class="final-price">Rs.0</span>  
+         </div>
+         <div class="checkout-btn">
+            <a id="checkoutBtn" href="./finalpage.html" class="disabled">Checkout</a>
+         </div>
+      </div> 
+   </div>
+
+
+
+ </div>
+</section>
+
+
+
+<div class="footer_card">
+   <div class="red-bar"></div>
+   <footer class="footer">
+      <div class="logo-container">
+         <img src="assets/logos/fb.png" alt="Logo 1">
+         <img src="assets/logos/twitter.png" alt="Logo 2">
+      </div>
+      <p>This is some footer text.</p>
+   </footer>
+</div>
+
+
+   <script>
+      // Get all select elements
+      const ticketSelects = document.querySelectorAll('.number-of-tickets');
+
+      // Function to calculate total price
+      function calculateTotalPrice() {
+         let totalPrice = 0;
+         ticketSelects.forEach(select => {
+            const ticketPrice = parseInt(select.parentElement.querySelector('.price').textContent.replace('Rs.', '').trim());
+            const ticketQuantity = parseInt(select.value);
+            totalPrice += ticketPrice * ticketQuantity;
+         });
+         return totalPrice;
+      }
+
+      // Function to update total price display
+      function updateTotalPrice() {
+         const totalPrice = calculateTotalPrice();
+         document.querySelector('.final-price').textContent = 'Rs.' + totalPrice;
+         // Enable or disable checkout button based on total price
+         const checkoutBtn = document.getElementById('checkoutBtn');
+         if (totalPrice > 0) {
+            checkoutBtn.classList.remove('disabled');
+            checkoutBtn.href = './finalpage.html?total=' + totalPrice;
+         } else {
+            checkoutBtn.classList.add('disabled');
+            checkoutBtn.removeAttribute('href');
+         }
+      }
+
+      // Attach change event listener to each select element
+      ticketSelects.forEach(select => {
+         select.addEventListener('change', updateTotalPrice);
+      });
+
+      // Initial update of total price
+      updateTotalPrice();
+   </script>
+</body>
+</html>

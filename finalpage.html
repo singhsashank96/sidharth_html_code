@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/finalpage.css">
+    <link rel="shortcut icon" href="assets/logos/logo.png" type="image/x-icon">
+   
+    
+
+    <title id="titlehere"></title>
+</head>
+
+<body onload="loadDetails()">
+
+    <div class="navigation">
+       
+    
+        <div class="navigation_container">     
+            
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Speakers</a>
+            <a href="#">Schedule</a>
+            <a href="#">Sponsors</a>
+            <a href="#">Info</a>
+            
+
+        </div>
+    </div>
+    <section class="add-details">
+        <div class="detail--main_container">
+            <h1 id="add_details" class="detail--main_details">Add your Details</h1>
+            <div class="form--main">
+                <form name="myForm" id="registrationForm">
+                    <label for="fname" id="first_name" class="form--main_text_firstname">First name</label><br><br>
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="lname" id="last_name" class="form--main_text_lastname">Last name</label><br><br>
+                    <input type="text" id="lname" name="lname" required>
+                    <label id="email_name" class="form--main_text_email">Email</label><br><br>
+                    <input type="email" id="form--main_email" name="Ename" aria-label="details_email" required>
+                    <input  type="submit" value="Continue" class="form--main_continue" onsubmit="evaulate()">
+                </form>
+            </div>
+        </div>
+        <section class="main2">
+            <div class="price-entry">
+                <h1 id="price-entry_text_inspire" class="price-entry_text">THE INSPIRE SUMMIT</h1>
+
+                <div class="side-container">
+
+                </div>
+                <div class="price-entry_text_two">
+                    <h2 id="price-entry_text_apr" class="price-entry_apr">Apr 18, 2035, 8:30 AM</h2>
+                </div>
+                <div class="hitex">
+                    <h2 id="price-entry_hit" class="hitex_text">HITEX Exhibition Center</h2>
+                </div>
+                <div class="side-container">
+
+                </div>
+                <div class="inside-items">
+                </div>
+                <div class="cont-total">
+                    <h2 id="cont-total-text" class="cont-total_text">Subtotal</h2>
+                    <h2 id="final-price_rs_final" class="final-price_rs">Rs <span id="totalAmount1"></span></h2>
+                                    </div>
+                <div class="final-service1">
+                    <h2 id="final-service1-text-one" class="final-service1_text"></h2>
+                    <h2 id="final-service1_rs-two" class="final-service1_rs"></h2>
+                </div>
+                <div class="side-container">
+
+                </div>
+                <div class="final-price">
+                    <h1 id="final-price_final" class="final-price_text">Total</h1>
+                    <h1 id="final-price_rs_final" class="final-price_rs">Rs <span id="totalAmount2"></span></h1>
+                </div>
+        </section>
+    </section>
+    <script>
+        // Function to parse URL query parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    
+        // Get the total amount from the URL
+        const totalAmount = getUrlParameter('total');
+    
+        // Display the total amount on the page
+        const totalAmountElement1 = document.getElementById('totalAmount1');
+        const totalAmountElement2 = document.getElementById('totalAmount2');
+        if (totalAmount) {
+            totalAmountElement1.textContent = totalAmount;
+            totalAmountElement2.textContent = totalAmount; // Set both elements with the total amount
+        } else {
+            totalAmountElement1.textContent = 'Total Amount not found';
+            totalAmountElement2.textContent = 'Total Amount not found';
+        }
+    </script>
+    
+    
+</body>
+
+</html>

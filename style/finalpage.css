@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+.navigation {
+    width: 100%;
+    height: 130px;
+    background-color: #FF005A;
+}
+
+.navigation_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 600px;
+    margin-top: 40px;
+    color: white;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    padding-left: 30%;
+
+}
+
+.detail--main_container {
+    box-sizing: border-box;
+    width: 400px;
+    height: 40px;
+    padding-top: 10%;
+    position: relative;
+    right: 150px;
+
+
+}
+
+.navigation_container a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigation_container>div {
+
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navigation_container a:hover {
+    color: wheat;
+    cursor: pointer;
+}
+
+#logo {
+    position: relative;
+    z-index: 1000;
+    left: 50px;
+    top: 30px;
+}
+
+.add-details_details {
+
+    color: #52FFFF;
+    font-family: "Khand", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.add-details {
+    width: 100%;
+    height: 800px;
+    background: #0E1055;
+
+}
+
+#fname {
+    background: transparent;
+    height: 40px;
+    width: 260px;
+    border: 2px solid white;
+}
+
+#lname {
+    background: transparent;
+    height: 40px;
+    width: 260px;
+    border: 2px solid white;
+}
+
+.form--main {
+    display: flex;
+    gap: 24px;
+    padding-top: 40px;
+}
+
+#form--main_email {
+    background: transparent;
+    height: 40px;
+    width: 546px;
+    border: 2px solid white;
+}
+
+.form-main-email_container {
+    padding-top: 40px;
+}
+
+.form--main_continue {
+    background: transparent;
+    height: 48px;
+    width: 548px;
+    border: 3px solid #52FFFF;
+    border-radius: 100px;
+    color: #52FFFF;
+    font-weight: 500;
+    font-family: "Khand", sans-serif;
+    font-size: 24px;
+}
+
+.form--main_continue_container {
+    padding-top: 60px;
+}
+
+.form--main_continue:hover {
+    cursor: pointer;
+    color: wheat;
+    border-color: wheat;
+}
+
+.price-entry {
+    width: 300px;
+    height: 500px;
+    background: transparent;
+    border: 5px solid #52FFFF;
+    position: relative;
+    left: 34%;
+}
+
+.price-entry_text {
+    color: #52FFFF;
+    font-family: "Khand", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 25px;
+    padding-top: 17px;
+}
+
+.side-container {
+    width: 230px;
+    padding-left: 5px;
+    height: 0px;
+    position: relative;
+    right: 3%;
+    top: 4%;
+    border: 1px solid #4AE1E980;
+}
+
+.price-entry_text_two {
+    padding-top: 15%;
+    padding-left: 8%;
+
+}
+
+.price-entry_apr {
+    color: #FFFFFF80;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.6px;
+
+}
+
+.hitex {
+    color: #FFFFFF80;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    padding-top: 2%;
+    padding-left: 8%;
+
+}
+
+.hitex_text {
+    font-weight: 400;
+}
+
+.price-entry_text_three {
+    padding-left: 9.1%;
+    padding-top: 11%;
+}
+
+.price-entry_phase_text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    color: #FFFFFF80;
+}
+
+.price-entry_price {
+    padding-left: 8.5%;
+}
+
+.price-entry_price_text {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.8px;
+    letter-spacing: -0.5px;
+    text-align: left;
+
+}
+
+.price-entry_quantity {
+    padding-left: 8.5%;
+}
+
+.price-entry_quantity_text {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    display: inline-block;
+}
+
+.price-entry_rs {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    position: relative;
+    left: 60%;
+    font-weight: 400;
+    font-size: 12px;
+    display: inline-block;
+
+}
+
+.price-entry_text_four {
+    padding-top: 10%;
+    position: relative;
+    left: 9%;
+}
+
+.price-entry_gold_text {
+    color: #FFFFFF80;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+.price-entry_gold_rs_text {
+    color: #FFFFFF80;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20.8px;
+    letter-spacing: -0.5px;
+    text-align: left;
+
+}
+
+.price-entry_gold_quantity {
+    padding-left: 8.5%;
+}
+
+.price-entry_gold_quantity_text {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    display: inline-block;
+}
+
+.price-entry_gold_quantity_rs {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    position: relative;
+    left: 60%;
+    font-weight: 400;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.cont-total {
+    padding-left: 8.5%;
+
+}
+
+.cont-total_text {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    padding-top: 12%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cont-total_rs {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    left: 40%;
+}
+
+.final-service1 {
+    padding-left: 8.5%;
+}
+
+.final-service1_text {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 2px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.final-service1_rs {
+    color: #FFFFFF4D;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    left: 32%;
+}
+
+.final-price {
+    padding-top: 8.5%;
+    padding-top: 31px;
+}
+
+.final-price_text {
+    color: #FFFFFF80;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    left: 9%;
+}
+
+.final-price_rs {
+    color: #FFFFFF80;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.8px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    left: 47%;
+}
+
+#fname:hover {
+    cursor: pointer;
+    color: wheat;
+    border-color: wheat;
+}
+
+#lname:hover {
+    cursor: pointer;
+    color: wheat;
+    border-color: wheat;
+}
+
+#form--main_email:hover {
+    cursor: pointer;
+    border-color: wheat;
+}
+
+#lname {
+    position: relative;
+    left: 51%;
+    bottom: 24%;
+}
+
+.form--main_text_lastname {
+    position: relative;
+    bottom: 17.5%;
+    left: 2%;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.form--main_text_firstname {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.form--main_text_email {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: relative;
+    right: 48%;
+}
+
+#form--main_email {
+    position: relative;
+    bottom: 8%;
+}
+
+.form--main_continue {
+    position: relative;
+    top: 19%;
+}
+input[type="text"] {
+    color: #FFFFFF; 
+    padding: 10px; 
+}
+.price-entry{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.price-entry::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.price-entry::-webkit-scrollbar-thumb {
+    background: #8be0e0;
+}
+#form--main_email{
+    color: #FFFFFF; 
+    padding: 10px;
+}
+
