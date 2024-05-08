@@ -102,7 +102,7 @@
         <div class="front">
           <img id="social-media-icon" src="assets/images/s1.png" alt="Image 1" class="image">
         </div>
-            <div class="back1">RACHAEL</br> MOORE</br>
+            <div class="back1" onclick="openPopup()">RACHAEL</br> MOORE</br>
               <div class="waa">WAWA.OG</div>
               <div><button class="share-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     viewBox="0 0 32 32" fill="none">
@@ -119,7 +119,7 @@
         <div class="front">
           <img src="assets/images/s2.png" alt="Image 2" class="image">
         </div>
-        <div class="back1">RACHAEL</br> MOORE</br>
+        <div class="back1"  onclick="openPopup()" >RACHAEL</br> MOORE</br>
           <div class="waa">WAWA.OG</div>
           <div><button class="share-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                 viewBox="0 0 32 32" fill="none">
@@ -137,7 +137,7 @@
         <div class="front">
           <img src="assets/images/s2.png" alt="Image 3" class="image">
         </div>
-        <div class="back1">RACHAEL</br> MOORE</br>
+        <div class="back1"   onclick="openPopup()">RACHAEL</br> MOORE</br>
           <div class="waa">WAWA.OG</div>
           <div><button class="share-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                 viewBox="0 0 32 32" fill="none">
@@ -155,7 +155,7 @@
         <div class="front">
           <img src="assets/images/s4.png" alt="Image 4" class="image">
         </div>
-        <div class="back1">RACHAEL</br> MOORE</br>
+        <div class="back1"  onclick="openPopup()">RACHAEL</br> MOORE</br>
           <div class="waa">WAWA.OG</div>
           <div><button class="share-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                 viewBox="0 0 32 32" fill="none">
@@ -274,12 +274,35 @@
 </section>
 
 
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <div class="pop-up-head">
+      <div></div>
+      <div onclick="closePopup()"><img  style="height: 29px;" src="data:image/png;base64,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"></div>
+    </div>
+    <div>
+      <div   class='soceil_icon_parent'>
+        <div  class='sociel_icon_box'>
+            <div><img src='images/Facebook.png' /></div>
+            <div><img src='images/twitter.png' />
+            </div>            
+                <div ><img  class="img_model" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_lf-usOWFTRx4vSeRAUsqc6Jq6ipHlPGbpMxejedknw&s"   ></div>
+                <div><img src='images/tumblr1.png' /> </div>
 
+        </div>
+        <div class='model_input'>
+             <input   placeholder="https//:fb.com/www.fb.com/login"  /> <button><img style="height: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAZlBMVEUAAAD///3////T09O5ubfj4+Kxsa/p6eheXl1wcG8XFxdMTE0qKitjY2P8/PoEBAR4eHfv7+84ODjb29r29vWDg4KampiTk5IMDAwyMjKgoJ9ra2rCwsGpqadXV1eNjYwdHR5FRUWOmcTnAAAEwklEQVR4nO2dYXeqOBCGIYAo1QAS0SIo/v8/uZlw3aXWUNdO4uK+z8f2nsx9SAjJ9JyZIAAAAAAAAAAA8Ibk/6FRwJXDof9gYn04vFAk/1w2iVKCCaWSbvn5otW23VX6vxCyIUI9XLLbvkAlKyIdXIaSz0YPJkUYFWvfLvm+NJMiuRaZuM6yUE3v1SQIOiWkNOuCj3TQEar1Oze1MC4q3i352OwWatBpfLoc9drW09IemR/hehPT7Ah15h13ikNpVkNNKoxbKQ21rs3kSL5Rp0PmQafXmJC1m/F32kbqhZb7+eJ86o1MhrGr4TtBm+SHq+Fvo+lvi0icRTtVtIg7TyfPiB6ds4kJgsY8LHfjj/lItIxauQtQ0PdYndwFuIklEocn3L5y/LRGrIyMyyVN61g52ixvMEs6dRmBZITDl3LEInT9fpKMu63/C35k3mpmIPPvWYh3kpnzzGSXYzHi2M5XZtPEUVqOUXOVuXSJvlGG39IOc5Q5J1L8yQJ9SQnNUGYdy2uO78vMzFGmb8VVRFX/JISqcobLLDMu2iS+SZh2M/zOnI2Lir9lk2b4ndmOElhfry4zlGmFDEV5vnOhnJtMHpxoB1bNvevk3GSCIKY3Jrr7t5L5yZgMzP389exkToqSFvezPbOTOerTpIju/252Mgv5RjL0/kOGBcjYgQwbkLEDGTYgYwcybEDGDmTYgIwdyLABGTuQYQMydiDDBmTsQIYNyNiBDBuQsQMZNiBjBzJsQMYOZNiAjB3IsAEZO5BhAzJ2IMMGZOxAhg3I2IEMG5CxAxk2IGMHMmxAxg5k2ICMHciwARk7kGEDMnYgwwZk7ECGDY8y5neQeRSPMrXyIcNYeW5KZpUKDzKyYxtuSsaUnkxd1h811RqPbMNNySxTilWwxfrGhqa+5CsKOiUzrIIFW6xvcJdrnZRpqEy7pcDGr8mDSxSybmZTMjpaGUoZxo7emkNHz0pe+EqoTs4MlTiUQjVOys9meueXkrW40bRMTmV7h1LanPWuzVBnU1NNcBZPn5YJjiZg2LJ3V1i3oRmada+cljmYWprUFqDdZH3GRJ8to6GwneDdKn+YGf0P5FAbUAjJ1eNAXXs2yLj3K5PXQ/uJm3qBv24+oYdTHXO3gR9lgryIFGePkz8FIYWMdrwqj8gEwXYf/aL3zP1ZDauav2XLIzJBcNl1cZI+h5kINf5JmbTd2cW54jEZ/Yn7XG6e4kSnVdGexj9bbjMHKo/LPA9VgwsdnlZHPCzz9AGAZJi/Jzb+nzPzNJB5jjh8JxkvM+OpxcR+olojDwklLRxmRUasSKZy2KErS/3JnErHsQqTFvXUy6hynE5qnb+Uf5MHDW02ydJVAHM0k776Mm0F3SNjNyc/Kp+uL8epo9FvyPNgT+Hk3kk6Ke8kdUqr/bVqVSad1NFdiTmddOnM2InHPqA7E1G0BfPVb1uYP78I5eyFvMdeDEHbuljxUbdSUMpSnL32A+4XQwJGiPLJq/E96KKvXegk47XdbLYf2luyJZMIc/cXKXsK5kf6YxtSE1DOPrOS+sy2m1d0Ne5X1Sgx9HtM95dq1b9AxbBtqpKtN3Opqv0rehl/Yc3Eqz3eDqZNFI3mAQAAAAAAAODKX+g9U5iW01QaAAAAAElFTkSuQmCC" ></button>
+        </div>
+    </div>
+     </div>
+  </div>
+</div>
 
   <script>
     document.getElementById("date").textContent = "2024-05-10";
     document.getElementById("location").textContent = "New York City";
   </script>
+
 
 
 <!-- footer -->
@@ -295,6 +318,15 @@
 
 </div>
 <script src="script.js"></script>
+<script>
+  function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
 
 
 </body>

@@ -211,6 +211,8 @@
 	pointer-events: none;
 }
 
+
+
 .checkout-btn a {
 	background-color: #ffffff;
 	position: absolute;
@@ -278,7 +280,8 @@
 }
 .checkout-btn.check_new a
 {
-	margin-left: 0px;
+	margin-top: -40px;
+    margin-left: -70px;
 }
 .checkout-btn.check_new a.disabled
 {
