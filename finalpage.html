@@ -14,37 +14,38 @@
 
 <body onload="loadDetails()">
 
-    <div class="navigation">
-       
-    
-        <div class="navigation_container">     
-            
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Speakers</a>
-            <a href="#">Schedule</a>
-            <a href="#">Sponsors</a>
-            <a href="#">Info</a>
-            
-
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Logo" class="logo">  
         </div>
-    </div>
-    <section class="add-details">
+        <ul class="nav-menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Speakers</a></li>
+           <li><a href="#">Schedule</a></li>
+           <li><a href="#">Sponsors</a></li>
+           <li><a href="#">Info</a></li>
+        </ul>
+    </nav>
+    <!-- <section class="add-details">
         <div class="detail--main_container">
-            <h1 id="add_details" class="detail--main_details">Add your Details</h1>
-            <div class="form--main">
-                <form name="myForm" id="registrationForm">
-                    <label for="fname" id="first_name" class="form--main_text_firstname">First name</label><br><br>
-                    <input type="text" id="fname" name="fname" required>
-                    <label for="lname" id="last_name" class="form--main_text_lastname">Last name</label><br><br>
-                    <input type="text" id="lname" name="lname" required>
-                    <label id="email_name" class="form--main_text_email">Email</label><br><br>
-                    <input type="email" id="form--main_email" name="Ename" aria-label="details_email" required>
-                    <input  type="submit" value="Continue" class="form--main_continue" onsubmit="evaulate()">
-                </form>
+            <div>
+                <h1 id="add_details" class="detail--main_details">Add your Details</h1>
+                <div class="form--main">
+                    <form name="myForm" id="registrationForm">
+                        <label for="fname" id="first_name" class="form--main_text_firstname">First name</label><br><br>
+                        <input type="text" id="fname" name="fname" required>
+                        <label for="lname" id="last_name" class="form--main_text_lastname">Last name</label><br><br>
+                        <input type="text" id="lname" name="lname" required>
+                        <label id="email_name" class="form--main_text_email">Email</label><br><br>
+                        <input type="email" id="form--main_email" name="Ename" aria-label="details_email" required>
+                        <input  type="submit" value="Continue" class="form--main_continue" onsubmit="evaulate()">
+                    </form>
+                </div>
             </div>
+           
         </div>
-        <section class="main2">
+        <div class="main2">
             <div class="price-entry">
                 <h1 id="price-entry_text_inspire" class="price-entry_text">THE INSPIRE SUMMIT</h1>
 
@@ -77,8 +78,80 @@
                     <h1 id="final-price_final" class="final-price_text">Total</h1>
                     <h1 id="final-price_rs_final" class="final-price_rs">Rs <span id="totalAmount2"></span></h1>
                 </div>
-        </section>
-    </section>
+            </div>
+            
+    </section> -->
+    <div class="Finel_div">
+     <div class="Finel_div_body">
+      <div class="form_div">
+        <div>
+            <h1 id="add_details" class="detail--main_details heading">Add your Details</h1>
+            <div class="form--main">
+                <form name="myForm" id="registrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">First Name</label>
+                            <input type="text" id="name" name="name" class="full-width form_input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Last Name</label>
+                            <input type="email" id="email" name="email" class="full-width form_input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="full-width form_input_email">
+                    </div>
+                    <button type="submit" class="full-width fonm_btn">Continue</button>
+                </form>
+            </div>
+            
+        </div>
+      </div>
+      <div class="table_div"><div class="price-entry">
+        <h1 id="price-entry_text_inspire" class="price-entry_text">THE INSPIRE SUMMIT</h1>
+
+        <div class="side-container">
+
+        </div>
+        <div class="price-entry_text_two">
+            <h2 id="price-entry_text_apr" class="price-entry_apr">Apr 18, 2035, 8:30 AM</h2>
+        </div>
+        <div class="hitex">
+            <h2 id="price-entry_hit" class="hitex_text">HITEX Exhibition Center</h2>
+        </div>
+        <div class="side-container">
+
+        </div>
+        <div class="inside-items">
+        </div>
+        <div class="cont-totala">
+            <div> <h2 id="cont-total-text" >Subtotal</h2></div>
+            <div>            <h2 id="final-price_rs_final" >Rs <span id="totalAmount1"></span></h2>
+            </div>
+                            </div>
+        <div class="final-service1">
+            <h2 id="final-service1-text-one" class="final-service1_text"></h2>
+            <h2 id="final-service1_rs-two" class="final-service1_rs"></h2>
+        </div>
+        <div class="side-container">
+
+        </div>
+        <div class="cont-totalb">
+            <div> <h2 id="cont-total-text" >Total</h2></div>
+            <div>                        <h1 id="final-price_rs_final" class="final-price_rs"  style="padding-top: 5px;" >Rs <span id="totalAmount2"></span></h1>
+            </h2>
+            </div>
+                            </div>
+        <div class="final-service1">
+            <h2 id="final-service1-text-one" class="final-service1_text"></h2>
+            <h2 id="final-service1_rs-two" class="final-service1_rs"></h2>
+        </div>
+        </div></div>
+
+
+     </div>
+    </div>
     <script>
         // Function to parse URL query parameters
         function getUrlParameter(name) {
@@ -100,8 +173,8 @@
             totalAmountElement1.textContent = totalAmount;
             totalAmountElement2.textContent = totalAmount; // Set both elements with the total amount
         } else {
-            totalAmountElement1.textContent = 'Total Amount not found';
-            totalAmountElement2.textContent = 'Total Amount not found';
+            totalAmountElement1.textContent = '0000';
+            totalAmountElement2.textContent = '0000';
         }
     </script>
     

@@ -7,7 +7,7 @@
 .wrapper {
 	width: 100vw;
 	height: 175vh;
-	position: relative;
+	/* position: relative; */
 }
 
 .header {
@@ -20,7 +20,7 @@
 
 
 .logo {
-	position: absolute;
+	/* position: absolute; */
 	top: 40px;
 	left: 60px;
 }
@@ -34,38 +34,7 @@
 
 
 
-.navbar {
-	display: flex;
-	flex-direction: column;  background-color: #FF005A;
-	padding: 1rem 2rem;
-	align-items: center;  }
-  
-  .logo {
-	width: 100px;  margin-bottom: 1rem;
-  }
-  
-  .nav-menu {
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	justify-content: space-between;  margin-bottom: 1rem;
-  }
-  
-  .nav-menu li {
-	margin-right: 1rem;
-  }
-  
-  .nav-menu a {
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-	padding: 15px;
-  }
-  
-  .nav-menu a:hover {
-	color: #000;
-  }
+
   
   .text-container {
 	
@@ -83,7 +52,7 @@
   
 
 .body {
-	position: relative;
+	/* position: relative; */
 	margin-left: 13rem;
 	width: 65vw;
 	height: 100vh;
@@ -287,3 +256,62 @@
 {
 	position: initial;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+	background-color:#FF005A;
+}
+
+.logo-container {
+    margin-right: auto; 
+}
+
+.logo {
+    max-width: 100%;
+	padding: 25px;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-text-container {
+	margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 30px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #ffffff;
+	font-weight: bold;
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 20px; /* Add margin to separate from list items */
+}
+
+.inspire{
+	color: white;
+    font-family: "Khand", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
