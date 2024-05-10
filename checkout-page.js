@@ -1,42 +1,36 @@
-function updateTotalAndButtonState() {
-    let total = 0;
-    let anyTicketsSelected = false;
+    // Get all select elements
+    const ticketSelects = document.querySelectorAll('.number-of-tickets');
 
-    
-    document.querySelectorAll('.ticket-header').forEach(function (header) {
-        let price = parseFloat(header.querySelector('.price').textContent.replace('Rs. ', ''));
-        let quantity = parseInt(header.querySelector('.number-of-tickets').value);
-        total += price * quantity;
-
-        if (quantity > 0) {
-            anyTicketsSelected = true;
-        }
-    });
-
-   
-    document.querySelector('.final-price').textContent = 'Rs. ' + total;
-
-  
-    let checkoutButton = document.querySelector('.checkout-btn a');
-    if (anyTicketsSelected) {
-        checkoutButton.classList.remove('disabled');
-    } else {
-        checkoutButton.classList.add('disabled');
+    // Function to calculate total price
+    function calculateTotalPrice() {
+       let totalPrice = 0;
+       ticketSelects.forEach(select => {
+          const ticketPrice = parseInt(select.parentElement.querySelector('.price').textContent.replace('Rs.', '').trim());
+          const ticketQuantity = parseInt(select.value);
+          totalPrice += ticketPrice * ticketQuantity;
+       });
+       return totalPrice;
     }
-}
 
+    // Function to update total price display
+    function updateTotalPrice() {
+       const totalPrice = calculateTotalPrice();
+       document.querySelector('.final-price').textContent = 'Rs.' + totalPrice;
+       // Enable or disable checkout button based on total price
+       const checkoutBtn = document.getElementById('checkoutBtn');
+       if (totalPrice > 0) {
+          checkoutBtn.classList.remove('disabled');
+          checkoutBtn.href = './finalpage.html?total=' + totalPrice;
+       } else {
+          checkoutBtn.classList.add('disabled');
+          checkoutBtn.removeAttribute('href');
+       }
+    }
 
-document.querySelectorAll('.number-of-tickets').forEach(function (selectElement) {
-    selectElement.addEventListener('change', updateTotalAndButtonState);
-});
-
-
-
-function capitalizeParagraph() {
-    var paragraphs = document.querySelectorAll('.gold1 p, .diamond p');
-    paragraphs.forEach(function(paragraph) {
-        paragraph.textContent = paragraph.textContent.toUpperCase();
+    // Attach change event listener to each select element
+    ticketSelects.forEach(select => {
+       select.addEventListener('change', updateTotalPrice);
     });
-}
 
-capitalizeParagraph();
+    // Initial update of total price
+    updateTotalPrice();
